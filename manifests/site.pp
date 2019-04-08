@@ -3,7 +3,7 @@ node default {
 node 'master.puppet.vm' {
    include role::master_server
 }
-node /^web/ {
+node /^agent-1/ {
    include role::app_server
 }
 node /^db/ {
