@@ -11,7 +11,7 @@ node /^agent*/ {
    include role::app_server
       file { '/root/README2':
               ensure => file,
-              content => $fdqn,
+              content => $fqdn,
    }
 }
 node /^db/ {
