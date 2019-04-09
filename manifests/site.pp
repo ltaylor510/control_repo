@@ -9,8 +9,8 @@ node 'master.puppet.vm' {
 }
 node /^agent*/ {
    include role::app_server
-      file { '/root/README':
-   ensure => file,
+      file { '/root/README2':
+   ensure => present,
    content => $fdqn,
    }
 }
