@@ -10,7 +10,6 @@ node 'master.puppet.vm' {
 node /^agent*/ {
    include role::docker_agent_nodes
     }
-}
 node /^db/ {
    include role::db_server
 }
