@@ -8,11 +8,8 @@ node 'master.puppet.vm' {
    }
 }
 node /^agent*/ {
-   include role::app_server
-      file { '/root/README':
-              ensure => file,
-              content => $fqdn,
-   }
+   include role::docker_agent_nodes
+    }
 }
 node /^db/ {
    include role::db_server
