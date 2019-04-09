@@ -3,8 +3,8 @@ class profile::ssh_server {
          ensure => present,
 }
       service {'sshd':
-         ensure = > 'present',
-         enable => '
+         ensure = > 'running',
+         enable => 'true',
       }
       ssh_authorized_key { 'root@puppetserver':
          ensure => present,
